@@ -52,12 +52,24 @@ function cd() {
     fi
 }
 
-
-##
-# Your previous /Users/Tejas/.bash_profile file was backed up as /Users/Tejas/.bash_profile.macports-saved_2018-04-23_at_01:39:36
-##
+# Turn on Timestamps upon login if using iTerm2
+if [ $TERM_PROGRAM = "iTerm.app" ]; then 
+    osascript -e 'tell application "System Events" to keystroke "e" using {command down, shift down}' 
+fi
 
 # MacPorts Installer addition on 2018-04-23_at_01:39:36: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# Send a push notification to Pushbullet (install on your phone/laptop) whenever
+# any BLT command finishes. (Need to install noti: `brew install noti`)
+export NOTI_PUSHBULLET_ACCESSTOKEN=o.aoOgUlrJDbKrCWHsZK22puyG3AoJRmsp
+function blt {
+    noti -p -b -m "blt $@ exited with $?" blt $@
+}
+
+
+source ~/.bashrc
+
+# update PATH to include personal bin if it exists
+[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
