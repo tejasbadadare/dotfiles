@@ -1,0 +1,1 @@
+printf "CPU: `ps -A -o %cpu | awk '{s+=$1} END {print s \" / 6\"}' | { bc | tr -d '\n' ; echo \"%\"; }`%" && printf "\n, MEM: `ps -A -o %mem | awk '{s+=$1} END {print s \"%%\"}'`"
