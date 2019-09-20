@@ -108,11 +108,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 782 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-<<<<<<< HEAD
-	<string>-1440 1208 1440 855 -1440 -468 1440 2537 </string>
-=======
 	<string>842 654 570 373 0 0 1680 1027 </string>
->>>>>>> ecb1bf55436fd39b0e5ee9d8393f6df393025de4
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>343 181 585 452 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_AF3E238B-B91B-422C-8280-B02C6615C9B6</key>
